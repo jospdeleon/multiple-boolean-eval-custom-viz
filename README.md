@@ -6,10 +6,12 @@ For example, you have the following queries and thresholds to compare it to:
 
 | NRQL                            | Threshold     | NRQL Result <= Threshold?   |
 | ------------------------------- | ------------- | ----------------------------|
-| SELECT average(`apm.service.cpu.usertime.utilization`) FROM Metric WHERE appName = 'Promo Service'                          | 30            | true                        |
-| SELECT average(`apm.service.datastore.duration`) FROM Metric WHERE appName = 'Promo Service'                          | 10            | false                       |
+| SELECT average(`apm.service.cpu.usertime.utilization`) FROM Metric WHERE appName = 'Promo Service'                          | 30            | false                       |
+| SELECT average(`apm.service.datastore.duration`) FROM Metric WHERE appName = 'Promo Service'                          | 10            | true                        |
 
-Evaluating/combining the outputs above (which are `true` AND `false`) will produce a final result of `false`. If both are `true`, then the final result will also be `true`.
+Evaluating/combining the outputs above (which are `false` AND `true`) will produce a final result of `false`. If both are `true`, then the final result will also be `true`.
+
+![Sample output](sample.png)
 
 ## Getting started
 
