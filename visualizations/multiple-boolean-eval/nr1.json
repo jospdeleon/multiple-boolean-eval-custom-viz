@@ -1,0 +1,39 @@
+{
+    "schemaType": "VISUALIZATION",
+    "id": "multiple-boolean-eval",
+    "displayName": "Multiple Boolean Evaluator",
+    "description": "",
+    "configuration": [
+        {
+            "name": "nrqlQueries",
+            "title": "NRQL Queries",
+            "type": "collection",
+            "items": [
+                {
+                    "name": "accountId",
+                    "title": "Account ID",
+                    "description": "Account ID to be associated with the query",
+                    "type": "account-id"
+                },
+                {
+                    "name": "query",
+                    "title": "Query",
+                    "description": "NRQL query for visualization",
+                    "type": "nrql"
+                },
+                {
+                    "name": "label",
+                    "title": "Label",
+                    "description": "Label for the NRQL evaluation against the threshold",
+                    "type": "string"
+                },
+                {
+                    "name": "threshold",
+                    "title": "Threshold",
+                    "description": "Numeric value to be compared against the NRQL result. Currently, the NRQL result is evaluated if it's less than or equal to this value",
+                    "type": "number"
+                }
+            ]
+        }
+    ]
+}
