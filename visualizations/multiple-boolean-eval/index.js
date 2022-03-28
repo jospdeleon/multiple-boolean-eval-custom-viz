@@ -131,7 +131,7 @@ export default class MultipleNrqlVisualization extends React.Component {
 
             if (i == nrqlQueries.length - 1) {
               return <>
-              <BillboardChart data={transformedData}></BillboardChart>;
+              <BillboardChart data={transformedData}></BillboardChart>
               <BillboardChart data={finalOutput}></BillboardChart>
               </> 
             } else {
